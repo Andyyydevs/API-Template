@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Smartphone X",
+    "price": "599.99"
+  },
+  {
+    "title": "Wireless Headphones",
+    "price": "129.99"
+  },
+  {
+    "title": "Smart Watch Pro",
+    "price": "249.99"
+  },
+  {
+    "title": "Laptop Ultra",
+    "price": "1299.99"
+  },
+  {
+    "title": "4K TV",
+    "price": "799.99"
+  },
+  {
+    "title": "Gaming Console",
+    "price": "499.99"
+  },
+  {
+    "title": "Digital Camera",
+    "price": "449.99"
+  },
+  {
+    "title": "Bluetooth Speaker",
+    "price": "79.99"
+  },
+  {
+    "title": "Fitness Tracker",
+    "price": "89.99"
+  },
+  {
+    "title": "Tablet Pro",
+    "price": "399.99"
+  }
+]
