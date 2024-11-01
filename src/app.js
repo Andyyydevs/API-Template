@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const connectDB = require('./Config/database');
 const authRoutes = require('./Routes/auth');
 const apiRoutes = require('./Routes/api');
+const { requestLogger, errorLogger } = require('./middleware/logging');
 
 const app = express();
 
@@ -30,6 +31,12 @@ const limiter = rateLimit({
   max: 100
 });
 app.use(limiter);
+
+// Add after existing middleware
+app.use(requestLogger);
+
+// Add error logger before routes
+app.use(errorLogger);
 
 // Routes
 app.use('/auth', authRoutes);

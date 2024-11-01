@@ -64,35 +64,6 @@ This is a robust API template built with Node.js, Express, and MongoDB. It provi
     - `sort`: Sort products (e.g., `name:asc` or `price:desc`)
     - `limit`: Limit the number of returned products
 
-## File Structure
-```
-src/
-├── Config/
-│ ├── database.js
-│ └── jwt.js
-├── Data/
-│ └── Products.json
-├── Middleware/
-│ └── auth.js
-├── Models/
-│ ├── products.js
-│ └── user.js
-├── Routes/
-│ ├── api.js
-│ └── auth.js
-├── Tests/
-│ └── testToken.js
-├── Utils/
-│ └── seedDatabase.js
-├── Views/
-│ ├── Dashboard.ejs
-│ ├── Login.ejs
-│ ├── error.ejs
-│ └── register.ejs
-├── app.js
-└── scripts/
-└── updateDatabase.js
-```
 
 ## Security
 
