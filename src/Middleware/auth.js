@@ -41,3 +41,22 @@ exports.authenticateApiToken = async (req, res, next) => {
   }
 };
 
+exports.authenticateUser = async (req, res, next) => {
+  try {
+    const token = req.cookies.token;
+    if (!token) {
+      return res.redirect('/auth/login'); // Redirect to login if no token
+    }
+
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const user = await User.findById(decoded.userId);
+    if (!user) {
+      return res.redirect('/auth/login');
+    }
+
+    req.user = user; // Attach the user object to the request
+    next(); // Proceed to the next middleware or route handler
+  } catch (error) {
+    return res.redirect('/auth/login');
+  }
+};

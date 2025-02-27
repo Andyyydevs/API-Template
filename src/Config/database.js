@@ -1,16 +1,17 @@
 const mongoose = require('mongoose');
-const seedProducts = require('../utils/seedDatabase');
-
+const {seedDB} = require('../utils/mongoose');
+const logger = require('../utils/logger');
 const connectDB = async () => {
   try {
+    logger.info('Connecting to Database...');
     await mongoose.connect(process.env.MONGODB_URI);
-    console.log('Connected to MongoDB');
+    logger.info('MongoDB Connection Successfull');
     
     // Seed the database if it's empty
-    await seedProducts();
+    await seedDB();
     
   } catch (error) {
-    console.error('MongoDB connection error:', error);
+    logger.error('MongoDB connection error:', error);
     process.exit(1);
   }
 };

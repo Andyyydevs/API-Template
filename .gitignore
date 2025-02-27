@@ -1,4 +1,6 @@
 node_modules/
 .env
+
+# Ignore Log Files
 src/logs/*.log
 src/logs/*.log.*

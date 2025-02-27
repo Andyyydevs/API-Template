@@ -1,7 +1,7 @@
 const axios = require('axios');
 require('dotenv').config();
 
-const API_URL = process.env.API_URL || 'http://localhost:3000';
+const API_URL = process.env.URL + process.env.PORT || 'http://localhost:3000';
 const API_TOKEN = process.env.TEST_API_TOKEN;
 
 if (!API_TOKEN) {
