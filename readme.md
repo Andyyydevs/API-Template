@@ -24,7 +24,7 @@ This is a robust API template built with Node.js, Express, and MongoDB. It provi
 
 1. Clone the repository:
 ```sh
-git clone https://github.com/yourusername/api-template.git
+git clone https://github.com/Andyyydevs/api-template.git
 cd api-template
 ```
 
